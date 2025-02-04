@@ -12,7 +12,7 @@ body{
 .main{
     display: flex;
     height: 100vh;
-    padding:0.5rem;
+    padding: 0.5rem;
 }
 
 .sidebar{
@@ -23,20 +23,23 @@ body{
     margin-right: 0.5rem;
 }
 .main-content{
-    background-color: blue;
+    background-color: black;
     flex: 1;
     border-radius: 1rem;
     overflow: scroll;
     background-color: #121212;
+    padding: 0 40px;
 }
 .music-player{
-    position: fixed;
-    background-color: yellow;
+    position:fixed;
+    background-color: black;
     bottom: 0px;
     width: 100%;
     min-width: 180px;
     height: 72px;
-    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: baseline;
 }
 
 .sidebar a{
@@ -88,7 +91,6 @@ body{
 }
 
 
-
 /* Styling for Sidebar- Library part */
 .library{
     background-color: #121212;
@@ -106,7 +108,7 @@ body{
 }
 
 .options .lib-options img{
-    /* line-height: 20px; */
+ /* line-height: 20px; */
     width: 1.25rem;
     height: 1.25rem;
 }
@@ -146,7 +148,7 @@ body{
     margin-bottom: 0.20rem;
 }
 .batch{
-    font-size: 0.75rem;
+    /* font-size: 0.75rem; */
     padding: 0.25rem 1rem;
     background-color: #ffffff;
     border-radius: 100px;
@@ -157,27 +159,19 @@ body{
     height: 2rem;
     width: fit-content;
     /* margin-left: 4rem; */
-    font-size: 1rem;
-    align-self: center;
+    /* font-size: 1rem;
+    align-self: center; */
     
 }
 
 
-
-
-
-
-
-
-/* Main Content */
+                                                                    /* Main Content */
 .main-content{
-    display: flex;
+    display: flex; 
     flex-direction: column;
+    /* margin-top: 5rem; */
+    padding: 0 0 0 24px ;
 }
-
-
-
-
 /* 1.Sticky Nav */
 .sticky-nav{
     position: sticky;
@@ -186,19 +180,17 @@ body{
     margin: 0.5rem;
     width: 100%;
     font-size: 1rem;
-    background-color:#1e1e1e;
+    background-color:#121212;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
-.sticky-nav i{
-
-}
-
 .sticky-nav-icons{
     margin: 0.75rem;
 }
 
 .sticky-nav-options{
+    position:sticky;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -211,16 +203,19 @@ body{
     color: white;
     opacity: 0.7;
 }
+
 /* HOVER */
 .install:hover{
+    position: sticky;
     opacity: 1;
-    font-size: large;
+    font-size: 1.01rem;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
 .hide2:hover{
+    position: sticky;
     opacity: 1.2;
-    font-size: large;
+    font-size: 1.01rem;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
@@ -234,7 +229,139 @@ body{
     }
 }
 
-
-
-
 /* Main Content part 02 */
+.card{
+    background-color: #121212;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    margin-top: 1rem;
+    /* margin-bottom: 3rem; */
+}
+.cards-container{
+    display: flex;
+    /* use to change the line of the cards */
+    flex-wrap: wrap;
+}
+.cards-container-2{
+    display: flex;
+    /* use to change the line of the cards */
+    flex-wrap: wrap;
+    padding: 0 0 0 28px;
+    margin-bottom: 100px;
+}
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight:600;
+}
+.card-info{
+    font-size: 0.85rem;
+    opacity: 0.75;
+
+}
+.card:hover{
+    background-color: #1b1b1b;
+}
+
+
+                                                                            /* FOOTER */
+.footer{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player{
+    width: 50%;
+}
+.controls{
+    width: 25%;
+}
+.player-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-control-icon{
+    height:1rem ;
+    margin-right: 2rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 70%;
+    margin-right:3rem;
+    margin-left: 1.5rem;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+                                                                    /* SLIDER */
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+
+}
+
+/* SONG NAME */
+.album{
+    display: flex;
+    width: 25%;
+    /* justify-content: start; */
+    align-items: center;
+    padding: 1rem;
+}
+.song-image{
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+}
+.song-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding:10px ; */
+    
+    
+}
+.plus-icon{
+    margin-left: 1rem;
+    opacity: 0.75;
+}
+.plus-icon:hover{
+    opacity: 1;
+}
