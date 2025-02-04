@@ -12,6 +12,7 @@ body{
 .main{
     display: flex;
     height: 100vh;
+    padding:0.5rem;
 }
 
 .sidebar{
@@ -19,13 +20,14 @@ body{
     width: 340px;
     border-radius: 1rem;  /*1 rem=16px*/
     background-color: black;
+    margin-right: 0.5rem;
 }
 .main-content{
     background-color: blue;
     flex: 1;
     border-radius: 1rem;
     overflow: scroll;
-    background-color: darkgray;
+    background-color: #121212;
 }
 .music-player{
     position: fixed;
@@ -92,23 +94,147 @@ body{
     background-color: #121212;
     border-radius: 1rem;
     font-size: 30px;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
 }
 
 .options{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .options .lib-options img{
-    line-height: 20px;
-    width: 1.5rem;
-    height: 1.5rem;
+    /* line-height: 20px; */
+    width: 1.25rem;
+    height: 1.25rem;
 }
 .library .options .icons{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     position:relative;
-    right: 0px;
-    opacity: 0.75;
+    opacity: 0.7;
+    margin: 1rem;
+    display: flex;
 }
-.library .options .icons:hover{
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover{
     opacity: 1;
 }
+
+/* Library Box Styling */
+.lib-box{
+    padding: 0.5rem 1rem;
+    margin: 0.75rem 0 1.75rem 0;
+    background-color: #1f1f1f;
+    border-radius: 1rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 500; 
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-bottom: 0.20rem;
+}
+.batch{
+    font-size: 0.75rem;
+    padding: 0.25rem 1rem;
+    background-color: #ffffff;
+    border-radius: 100px;
+    border: none;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top:0.25rem ;
+    height: 2rem;
+    width: fit-content;
+    /* margin-left: 4rem; */
+    font-size: 1rem;
+    align-self: center;
+    
+}
+
+
+
+
+
+
+
+
+/* Main Content */
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* 1.Sticky Nav */
+.sticky-nav{
+    position: sticky;
+    display: flex;
+    padding: 1rem 0 1rem 0;
+    margin: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color:#1e1e1e;
+    justify-content: space-between;
+    align-items: center;
+}
+.sticky-nav i{
+
+}
+
+.sticky-nav-icons{
+    margin: 0.75rem;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.nav-item{
+    margin-right: 1rem;
+}
+.install{
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+}
+/* HOVER */
+.install:hover{
+    opacity: 1;
+    font-size: large;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+.hide2:hover{
+    opacity: 1.2;
+    font-size: large;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+@media(max-width:1000px){
+    .hide{
+        display: none;
+    }
+    .hide2{
+        display: none;
+    }
+}
+
+
+
+
+/* Main Content part 02 */
