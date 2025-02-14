@@ -1,7 +1,6 @@
 body{
     font-family: "Montserrat", serif;
   font-optical-sizing: auto;
-  /* font-weight: <weight>; */
   font-style: normal;
   margin: 0;
   background-color: black;
@@ -108,7 +107,6 @@ body{
 }
 
 .options .lib-options img{
- /* line-height: 20px; */
     width: 1.25rem;
     height: 1.25rem;
 }
